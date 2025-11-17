@@ -4,7 +4,7 @@ import tempfile
 import streamlit as st
 import pandas as pd
 
-from etsy_counter import extract_from_path, to_dataframe, category_rank  
+from size_style_core import extract_from_path, to_dataframe, category_rank  
 
 def summarize_by_category(agg: dict) -> dict:
     total_items = int(sum(agg.values()))
@@ -24,7 +24,7 @@ def summarize_by_category(agg: dict) -> dict:
         cat = category_rank(style)
         s_lower = style.lower()
 
-        # Sweatshirt / hoodie toplamlarını stringten de yakalayalım
+    
         if "sweatshirt" in s_lower and "hoodie" not in s_lower and "hooded" not in s_lower:
             sweatshirt_total += q
         if "hoodie" in s_lower or "hooded sweatshirt" in s_lower or "unisex hoodie" in s_lower:
@@ -134,6 +134,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
