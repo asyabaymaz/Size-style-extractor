@@ -5,7 +5,6 @@ import streamlit as st
 import pandas as pd
 
 from etsy_counter import extract_from_path, to_dataframe, category_rank  
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 def summarize_by_category(agg: dict) -> dict:
     total_items = int(sum(agg.values()))
@@ -135,5 +134,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
