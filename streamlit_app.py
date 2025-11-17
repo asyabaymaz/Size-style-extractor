@@ -4,14 +4,10 @@ import tempfile
 import streamlit as st
 import pandas as pd
 
-# Kendi masaüstü app dosyanın adı neyse onu yaz:
-# app_son_dogrusu.py ise, dosya adını python kurallarına uygun hale getirmen daha iyi olur.
-# Ör: dosyayı "saydir_app.py" diye kaydedip aşağıyı ona göre güncelle.
-from app_son_dogrusu import extract_from_path, to_dataframe, category_rank  # <- DOSYA ADINI AYARLA
-
+    from esty_counter import extract_from_path, to_dataframe, category_rank  
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 def summarize_by_category(agg: dict) -> dict:
-    """Tkinter'daki özet mantığını burada tekrar kullanıyoruz."""
     total_items = int(sum(agg.values()))
 
     sweatshirt_total = 0
@@ -139,3 +135,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
