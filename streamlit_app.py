@@ -4,7 +4,7 @@ import tempfile
 import streamlit as st
 import pandas as pd
 
-    from esty_counter import extract_from_path, to_dataframe, category_rank  
+from etsy_counter import extract_from_path, to_dataframe, category_rank  
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 def summarize_by_category(agg: dict) -> dict:
@@ -135,4 +135,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
