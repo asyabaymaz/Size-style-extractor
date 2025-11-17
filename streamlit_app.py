@@ -100,9 +100,9 @@ def main():
             label="CSV indir",
             data=csv_data,
             file_name="style_size_summary.csv",
-            mime="text/csv",
-    
+            mime="text/csv",)
 
 
 if __name__ == "__main__":
     main()
+
