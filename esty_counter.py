@@ -116,7 +116,6 @@ LABEL_RE = re.compile(
     re.IGNORECASE,
 )
 
-# eski QTY_RE / nearest_non_empty aslında kullanılmıyor ama kalsın dursun istersek ileride
 QTY_RE = re.compile(r"^\s*(?:qty|quantity)\s*[:x]*\s*(\d+)\s*$", re.IGNORECASE)
 
 HOODIE_MARKERS = ("hooded sweatshirt", "unisex hoodie")
@@ -394,7 +393,7 @@ class App:
             self.text.insert(tk.END, f"Total unique combos: {result.unique_count}\n")
             self.text.insert(tk.END, f"Total items: {total_items}\n")
             self.text.insert(tk.END, "By Category:\n")
-            self.text.insert(tk.END, f"  • Sweatshirts (non-hoodie): {sweatshirt_total}\n")
+            self.text.insert(tk.END, f"  • Sweatshirts: {sweatshirt_total}\n")
             self.text.insert(tk.END, f"  • Hoodies: {hoodie_total}\n")
             self.text.insert(tk.END, f"  • Adult Short Sleeve / Tees: {adult_tee_total}\n")
             self.text.insert(tk.END, f"  • V-Neck: {vneck_total}\n")
@@ -467,3 +466,4 @@ if __name__ == "__main__":
     else:
         app = App()
         app.run()
+
